@@ -19,5 +19,5 @@ https://discord.gg/AQHbsahZsV
 	["parachoques_carro"] 					 = {["name"] = "parachoques_carro", 			 	 ["label"] = "Parachoques de Carro", 		["weight"] = 500, 		["type"] = "item", 		["image"] = "parachoques_carro.png", 				    ["unique"] = false, 		["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = ""},
 	["pneus_carro"] 					 = {["name"] = "pneus_carro", 			 	 ["label"] = "Pneus de Carro", 		["weight"] = 500, 		["type"] = "item", 		["image"] = "pneus_carro.png", 				    ["unique"] = false, 		["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = ""},
 	["farois_carro"] 					 = {["name"] = "farois_carro", 			 	 ["label"] = "Farois de Carro", 		["weight"] = 500, 		["type"] = "item", 		["image"] = "farois_carro.png", 				    ["unique"] = false, 		["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = ""},
-	```
+```
   
