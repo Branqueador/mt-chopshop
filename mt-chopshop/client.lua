@@ -17,7 +17,7 @@ RegisterNetEvent('mt-chopshop:client:Desmanchar')
 AddEventHandler("mt-chopshop:client:Desmanchar", function()
     local playerPed = PlayerPedId()
     if IsPedInAnyVehicle(playerPed, false) then
-    QBCore.Functions.Progressbar("Desmanchar", "Destroing Car..", 15000, false, true, {
+    QBCore.Functions.Progressbar("Desmanchar", "Destroying Vehicle..", 15000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -42,7 +42,7 @@ end)
 -- Evento da ProgressBar
 RegisterNetEvent('mt-chopshop:client:DesmancharMotor')
 AddEventHandler("mt-chopshop:client:DesmancharMotor", function()
-    QBCore.Functions.Progressbar("DesmancharMotor", "Destroying Car Motor", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharMotor", "Destroying Vehicle Engine", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -67,7 +67,7 @@ end)
 
 RegisterNetEvent('mt-chopshop:client:DesmancharFarois')
 AddEventHandler("mt-chopshop:client:DesmancharFarois", function()
-    QBCore.Functions.Progressbar("DesmancharFarois", "destroynig car Lights", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharFarois", "Destroying Vehicle Lights", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -92,7 +92,7 @@ end)
 
 RegisterNetEvent('mt-chopshop:client:DesmancharPortas')
 AddEventHandler("mt-chopshop:client:DesmancharPortas", function()
-    QBCore.Functions.Progressbar("DesmancharPortas", "Destroying Car Doors", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharPortas", "Destroying Vehicle Doors", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -117,7 +117,7 @@ end)
 
 RegisterNetEvent('mt-chopshop:client:DesmancharVidros')
 AddEventHandler("mt-chopshop:client:DesmancharVidros", function()
-    QBCore.Functions.Progressbar("DesmancharVidros", "Destrying Car Glasses", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharVidros", "Destrying Vehicle Glasses", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -142,7 +142,7 @@ end)
 
 RegisterNetEvent('mt-chopshop:client:DesmancharPneus')
 AddEventHandler("mt-chopshop:client:DesmancharPneus", function()
-    QBCore.Functions.Progressbar("DesmancharPneus", "Destroying Car Tyres", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharPneus", "Destroying Vehicle Tires", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -167,7 +167,7 @@ end)
 
 RegisterNetEvent('mt-chopshop:client:DesmancharRodas')
 AddEventHandler("mt-chopshop:client:DesmancharRodas", function()
-    QBCore.Functions.Progressbar("DesmancharRodas", "Destroying Car Whells", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharRodas", "Destroying Vehicle Wheels", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -192,7 +192,7 @@ end)
 
 RegisterNetEvent('mt-chopshop:client:DesmancharParachoques')
 AddEventHandler("mt-chopshop:client:DesmancharParachoques", function()
-    QBCore.Functions.Progressbar("DesmancharParachoques", "Destroying Car Bumpers", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharParachoques", "Destroying Vehicle Bumpers", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -218,7 +218,7 @@ RegisterNetEvent('mt-chopshop:client:MenuDesmache', function()
         },
         {
             id = 2,
-            header = "Car Motor",
+            header = "Vehicle Engine",
             txt = "",
             params = {
                 event = "mt-chopshop:client:DesmancharMotor",
@@ -242,7 +242,7 @@ RegisterNetEvent('mt-chopshop:client:MenuDesmache', function()
         },
         {
             id = 5,
-            header = "Car Tyres",
+            header = "Car Tires",
             txt = "",
             params = {
                 event = "mt-chopshop:client:DesmancharPneus",
