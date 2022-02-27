@@ -9,7 +9,7 @@ Citizen.CreateThread(function()
 	SetBlipAsShortRange(blip, true)
 	SetBlipColour(blip, 28) -- Mudar cor aqui!
 	BeginTextCommandSetBlipName("STRING")
-	AddTextComponentSubstringPlayerName("Ferro Velho") -- Mudar nome do Blip aqui!
+	AddTextComponentSubstringPlayerName("Chopshop") -- Mudar nome do Blip aqui!
     EndTextCommandSetBlipName(blip)
 end)
 
@@ -17,7 +17,7 @@ RegisterNetEvent('mt-chopshop:client:Desmanchar')
 AddEventHandler("mt-chopshop:client:Desmanchar", function()
     local playerPed = PlayerPedId()
     if IsPedInAnyVehicle(playerPed, false) then
-    QBCore.Functions.Progressbar("Desmanchar", "A DESMANCHAR VEICULO", 15000, false, true, {
+    QBCore.Functions.Progressbar("Desmanchar", "Destroing Car..", 15000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -31,18 +31,18 @@ AddEventHandler("mt-chopshop:client:Desmanchar", function()
         DeleteEntity(veh)
         TriggerServerEvent("mt-chopshop:server:Desmanchar")
     else
-        QBCore.Functions.Notify("Falhado!", "error")
+        QBCore.Functions.Notify("Failed!", "error")
         end
     end)
     else
-        QBCore.Functions.Notify("Tens que estar dentro de um veículo para o desmanchar!", "error", 4500)
+        QBCore.Functions.Notify("You need to be in a vehicle to destroy that!", "error", 4500)
     end
 end)
 
 -- Evento da ProgressBar
 RegisterNetEvent('mt-chopshop:client:DesmancharMotor')
 AddEventHandler("mt-chopshop:client:DesmancharMotor", function()
-    QBCore.Functions.Progressbar("DesmancharMotor", "A DESMANCHAR MOTOR", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharMotor", "Destroying Car Motor", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -59,7 +59,7 @@ AddEventHandler("mt-chopshop:client:DesmancharMotor", function()
         TriggerServerEvent("mt-chopshop:server:DesmancharMotor")
         ClearPedTasks(playerPed)
     else
-        QBCore.Functions.Notify("Falhado!", "error")
+        QBCore.Functions.Notify("Failed!", "error")
         ClearPedTasks(playerPed)
         end
     end)
@@ -67,7 +67,7 @@ end)
 
 RegisterNetEvent('mt-chopshop:client:DesmancharFarois')
 AddEventHandler("mt-chopshop:client:DesmancharFarois", function()
-    QBCore.Functions.Progressbar("DesmancharFarois", "A DESMANCHAR FAROIS", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharFarois", "destroynig car Lights", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -84,7 +84,7 @@ AddEventHandler("mt-chopshop:client:DesmancharFarois", function()
         TriggerServerEvent("mt-chopshop:server:DesmancharFarois")
         ClearPedTasks(playerPed)
     else
-        QBCore.Functions.Notify("Falhado!", "error")
+        QBCore.Functions.Notify("Failed!", "error")
         ClearPedTasks(playerPed)
         end
     end)
@@ -92,7 +92,7 @@ end)
 
 RegisterNetEvent('mt-chopshop:client:DesmancharPortas')
 AddEventHandler("mt-chopshop:client:DesmancharPortas", function()
-    QBCore.Functions.Progressbar("DesmancharPortas", "A DESMANCHAR PORTAS", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharPortas", "Destroying Car Doors", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -109,7 +109,7 @@ AddEventHandler("mt-chopshop:client:DesmancharPortas", function()
         TriggerServerEvent("mt-chopshop:server:DesmancharPortas")
         ClearPedTasks(playerPed)
     else
-        QBCore.Functions.Notify("Falhado!", "error")
+        QBCore.Functions.Notify("Failed!", "error")
         ClearPedTasks(playerPed)
         end
     end)
@@ -117,7 +117,7 @@ end)
 
 RegisterNetEvent('mt-chopshop:client:DesmancharVidros')
 AddEventHandler("mt-chopshop:client:DesmancharVidros", function()
-    QBCore.Functions.Progressbar("DesmancharVidros", "A DESMANCHAR VIDROS", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharVidros", "Destrying Car Glasses", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -134,7 +134,7 @@ AddEventHandler("mt-chopshop:client:DesmancharVidros", function()
         TriggerServerEvent("mt-chopshop:server:DesmancharVidros")
         ClearPedTasks(playerPed)
     else
-        QBCore.Functions.Notify("Falhado!", "error")
+        QBCore.Functions.Notify("Failed!", "error")
         ClearPedTasks(playerPed)
         end
     end)
@@ -142,7 +142,7 @@ end)
 
 RegisterNetEvent('mt-chopshop:client:DesmancharPneus')
 AddEventHandler("mt-chopshop:client:DesmancharPneus", function()
-    QBCore.Functions.Progressbar("DesmancharPneus", "A DESMANCHAR PNEUS", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharPneus", "Destroying Car Tyres", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -159,7 +159,7 @@ AddEventHandler("mt-chopshop:client:DesmancharPneus", function()
         TriggerServerEvent("mt-chopshop:server:DesmancharPneus")
         ClearPedTasks(playerPed)
     else
-        QBCore.Functions.Notify("Falhado!", "error")
+        QBCore.Functions.Notify("Failed!", "error")
         ClearPedTasks(playerPed)
         end
     end)
@@ -167,7 +167,7 @@ end)
 
 RegisterNetEvent('mt-chopshop:client:DesmancharRodas')
 AddEventHandler("mt-chopshop:client:DesmancharRodas", function()
-    QBCore.Functions.Progressbar("DesmancharRodas", "A DESMANCHAR JANTES", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharRodas", "Destroying Car Whells", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -184,7 +184,7 @@ AddEventHandler("mt-chopshop:client:DesmancharRodas", function()
         TriggerServerEvent("mt-chopshop:server:DesmancharRodas")
         ClearPedTasks(playerPed)
     else
-        QBCore.Functions.Notify("Falhado!", "error")
+        QBCore.Functions.Notify("Failed!", "error")
         ClearPedTasks(playerPed)
         end
     end)
@@ -192,7 +192,7 @@ end)
 
 RegisterNetEvent('mt-chopshop:client:DesmancharParachoques')
 AddEventHandler("mt-chopshop:client:DesmancharParachoques", function()
-    QBCore.Functions.Progressbar("DesmancharParachoques", "A DESMANCHAR PARACHOQUES", 5000, false, true, {
+    QBCore.Functions.Progressbar("DesmancharParachoques", "Destroying Car Bumpers", 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -203,7 +203,7 @@ AddEventHandler("mt-chopshop:client:DesmancharParachoques", function()
    if success then
         TriggerServerEvent("mt-chopshop:server:DesmancharParachoques")
     else
-        QBCore.Functions.Notify("Falhado!", "error")
+        QBCore.Functions.Notify("Failed!", "error")
         end
     end)
 end)
@@ -213,68 +213,68 @@ RegisterNetEvent('mt-chopshop:client:MenuDesmache', function()
     exports['qb-menu']:openMenu({
         {
             id = 1,
-            header = "Desmanche de peças de veiculos",
+            header = "Destroy Car Parts",
             txt = ""
         },
         {
             id = 2,
-            header = "Motor de carro",
-            txt = "Vai te dar uma boa quantia de Ferro, Ferro Velho, Alminio e Cobre",
+            header = "Car Motor",
+            txt = "",
             params = {
                 event = "mt-chopshop:client:DesmancharMotor",
             }
         },
         {
             id = 3,
-            header = "Portas de carro",
-            txt = "Vai te dar uma boa quantia de Aluminio e Borracha",
+            header = "Car Doors",
+            txt = "",
             params = {
                 event = "mt-chopshop:client:DesmancharPortas",
             }
         },
         {
             id = 4,
-            header = "Vidros de carro",
-            txt = "Vai te dar uma boa quantia de Vidro",
+            header = "Car Glasses",
+            txt = "",
             params = {
                 event = "mt-chopshop:client:DesmancharVidros",
             }
         },
         {
             id = 5,
-            header = "Pneus de carro",
-            txt = "Vai te dar uma boa quantia de Borracha",
+            header = "Car Tyres",
+            txt = "",
             params = {
                 event = "mt-chopshop:client:DesmancharPneus",
             }
         },
         {
             id = 6,
-            header = "Parachoques de carro",
-            txt = "Vai te dar uma boa quantia de Plástico",
+            header = "Car Bumpers",
+            txt = "",
             params = {
                 event = "mt-chopshop:client:DesmancharParachoques",
             }
         },
         {
             id = 7,
-            header = "Farois de carro",
-            txt = "Vai te dar uma boa quantia de Plástico e de Vidro",
+            header = "Car Lights",
+            txt = "",
             params = {
                 event = "mt-chopshop:client:DesmancharFarois",
             }
         },
         {
             id = 8,
-            header = "Jantes de carro",
-            txt = "Vai te dar uma boa quantia de Aluminio e Plástico",
+            header = "Car Wheels",
+            txt = "",
             params = {
                 event = "mt-chopshop:client:DesmancharRodas",
             }
         },
         {
             id = 9,
-            header = "Fechar",
+            header = "< Close",
             txt = "",
             params = {
                 event = "qb-menu:closeMenu",
@@ -295,7 +295,7 @@ CreateThread(function()
           type = "client",
           event = "mt-chopshop:client:Desmanchar",
           icon = 'fas fa-car',
-          label = 'Desmanchar veiculo',
+          label = 'Destroy vehicle',
         }
       },
       distance = 5,
@@ -314,7 +314,7 @@ CreateThread(function()
           type = "client",
           event = "mt-chopshop:client:MenuDesmache",
           icon = 'fas fa-car',
-          label = 'Desmanchar peças de veiculos',
+          label = 'Destroy Car Parts',
         }
       },
       distance = 2.5,
